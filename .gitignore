@@ -1,0 +1,20 @@
+# 환경 변수 (API 키 등 민감 정보 포함) - 절대 커밋 금지
+.env
+.env.*
+!.env.example
+
+# 의존성 / 빌드 산출물
+node_modules/
+__pycache__/
+*.pyc
+dist/
+build/
+
+# 에디터 / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Playwright MCP 테스트 산출물
+.playwright-mcp/
