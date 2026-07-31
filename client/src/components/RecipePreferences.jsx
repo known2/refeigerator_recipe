@@ -49,7 +49,7 @@ export default function RecipePreferences({ preferences, onChange, disabled }) {
         </label>
 
         <label className="preferences-field preferences-field--wide">
-          제외할 재료 (쉰?로 구분)
+          제외할 재료 (쉼표로 구분)
           <input
             type="text"
             placeholder="예: 땅콩, 새우"
