@@ -1,0 +1,183 @@
+:root {
+  /* text */
+  --text: #57534e;
+  --text-h: #292524;
+  --text-muted: #85807a;
+
+  /* surfaces */
+  --bg: #fff8f1;
+  --bg-elevated: #ffffff;
+  --bg-soft: #ffedd5;
+  --border: #f1e1cf;
+
+  /* brand accent (warm coral/pumpkin) */
+  --accent: #c2410c;
+  --accent-hover: #9a3412;
+  --accent-text: #c2410c;
+  --accent-soft: #ffedd5;
+  --accent-soft-border: #fdba74;
+
+  /* secondary accent (mint) */
+  --mint: #0d9488;
+  --mint-soft: #ccfbf1;
+
+  /* status */
+  --danger: #dc2626;
+  --danger-soft: #fee2e2;
+  --danger-border: #fecaca;
+  --success: #16a34a;
+  --success-soft: #dcfce7;
+
+  /* elevation */
+  --shadow-sm: 0 1px 2px rgba(120, 72, 24, 0.07);
+  --shadow-md: 0 6px 16px rgba(120, 72, 24, 0.1), 0 2px 6px rgba(120, 72, 24, 0.06);
+  --shadow-lg: 0 16px 32px rgba(120, 72, 24, 0.16), 0 4px 10px rgba(120, 72, 24, 0.08);
+
+  /* shape */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-full: 999px;
+
+  --transition: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: 'Do Hyeon', var(--sans);
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #d6d3d1;
+    --text-h: #faf9f7;
+    --text-muted: #a8a29e;
+
+    --bg: #1c150f;
+    --bg-elevated: #2a2019;
+    --bg-soft: #3a281b;
+    --border: #3d3226;
+
+    --accent: #ea580c;
+    --accent-hover: #f97316;
+    --accent-text: #fb923c;
+    --accent-soft: #431407;
+    --accent-soft-border: #7c2d12;
+
+    --mint: #2dd4bf;
+    --mint-soft: #134e4a;
+
+    --danger: #f87171;
+    --danger-soft: #450a0a;
+    --danger-border: #7f1d1d;
+    --success: #4ade80;
+    --success-soft: #052e16;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 18px 36px rgba(0, 0, 0, 0.45), 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at 8% 0%, var(--bg-soft) 0%, transparent 45%),
+    radial-gradient(circle at 96% 12%, var(--mint-soft) 0%, transparent 40%),
+    var(--bg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading);
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 40px;
+  letter-spacing: -0.5px;
+  margin: 0;
+  @media (max-width: 1024px) {
+    font-size: 28px;
+  }
+}
+h2 {
+  font-size: 22px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 19px;
+  }
+}
+h3 {
+  font-size: 16px;
+  margin: 0 0 6px;
+}
+p {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2.5px solid var(--accent-text);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--bg-soft);
+}
+
+::selection {
+  background: var(--accent-soft-border);
+  color: var(--text-h);
+}
